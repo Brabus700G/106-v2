@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>106課表</title>
+	<style type="text/css">
+			* {
+			animation: fadeIn 1s;
+		}
+		@keyframes fadeIn {
+			from {
+				opacity: 0;
+			}
+			to {
+				opacity: 1;
+			}
+		}
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body {
+			background-color: #EEE;
+		}
+		img {
+			padding-left: 300px;
+			width: 500px;
+			height: auto;
+		}
+		/*************手機***********/
+		@media (max-width: 320px) {
+			img {
+				padding-left: 0px;
+				padding-top: 2px;
+				width: 280px;
+				height: auto;
+			}
+		}
+		/***************************/
+		a { 
+			text-decoration: none; color: #00AAAA; 
+		}
+		li { 
+			list-style-type: none; 
+		}		
+		nav { 
+			width: 100%; text-align: center; 
+		}
+		nav a { 
+			display: block; 
+			padding: 15px 0;
+			border-bottom: 1px solid #EEE;
+		}
+		nav a:hover { 
+			background: #00AAAA; color: #FFF; 
+		}
+		nav li:last-child a { 
+			border-bottom: none; 
+		}
+		.menu {
+			width: 240px;
+			height: 100%;
+			position: absolute;
+			background: #DDD;
+			left: -240px;
+			transition: all .3s ease-in-out;
+			-webkit-transition: all .3s ease-in-out;
+			-moz-transition: all .3s ease-in-out;
+			-ms-transition: all .3s ease-in-out;
+			-o-transition: all .3s ease-in-out;
+	
+		}
+		.menu-icon {
+			padding: 10px 20px;
+			background: #DDD;
+			color: #000000;
+			cursor: pointer;
+			margin-top: 4px;
+			border-radius: 5px;
+			float: right;
+			width: 15px;
+			height: 20px;
+		}
+		#menuToggle { 
+			display: none; 
+		}
+		#menuToggle:checked ~ .menu { 
+			position: absolute; left: 0; 
+		}
+	</style>
+</head>
+<body>
+	    	<input type="checkbox" id="menuToggle">
+		<label for="menuToggle" class="menu-icon">&#9776;</label>
+		<nav class="menu">
+			<ul>
+				<li>
+					<a href="class.html">
+					班級課表
+					</a>
+				</li>
+				<li>
+					<a href="106pictures.html">
+					活動照片
+					</a>
+				</li>
+				<li>
+					<a href="#">
+					班級人物
+					</a>
+				</li>
+				<li>
+					<a href="#">
+					課堂五四三
+					</a>
+				</li>
+				<li>
+					<a href="http://ww3.hcjh.tn.edu.tw">
+					學校首頁
+					</a>
+				</li>
+				<li>
+				    <a href="../houjia106.html">
+				        回到首頁
+				    </a>
+				</li>
+			</ul>
+		</nav>
+	<img src="課表.jpg">
+</body>
+</html>
