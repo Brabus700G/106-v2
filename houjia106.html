@@ -49,7 +49,7 @@
 		#brand {
 			text-align: center;
 			line-height: 50px;
-			color: black;
+			color: white;
 			font-size: 55px;
 			font-weight: bolder;
 			padding-top: 70px;
@@ -108,7 +108,6 @@
 			-moz-transition: all .3s ease-in-out;
 			-ms-transition: all .3s ease-in-out;
 			-o-transition: all .3s ease-in-out;
-	
 		}
 		.menu-icon {
 			padding: 10px 20px;
@@ -218,31 +217,32 @@
 			height: 750px;
 		}
 		#classimg {
-			width: 50%;
+			width: 45%;
 			height: auto;
-			margin-top: 100px;
+			margin-top: 190px;
 		}
 		#classtitle {
-			text-align: center;
+			margin-top: 150px;
+			float: right;
+			padding-right: 200px;
 			line-height: 50px;
-			color: black;
-			font-size: 55px;
+			color: white;
+			font-size: 100px;
 			font-weight: bolder;
 			font-family:Microsoft JhengHei;
 		}
 		#content3 {
+			color: #ffffff;
 			width: 100%;
 			height: 750px;
-			margin-top: 250px;
+			margin-top: 50px;
 			padding-top: 0px; 
 		}
 		#ct3head {
 			text-align: center;
 			line-height: 50px;
-			color: black;
 			font-size: 55px;
 			font-weight: bolder;
-			padding-top: 70px;
 			font-family:Microsoft JhengHei;
 		}
 		#classimg {
@@ -274,12 +274,12 @@
 		<nav class="menu">
 			<ul>
 				<li>
-					<a href="其他/class.html">
+					<a href="#content2">
 					班級課表
 					</a>
 				</li>
 				<li>
-					<a href="其他/106pictures.html">
+					<a href="#content3">
 					活動照片
 					</a>
 				</li>
@@ -343,5 +343,37 @@
 	    <div id="foot">&copy;copyright houjia 10603
 	    </div>
 	</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+  		$('a[href=#content2]').click(function() {
+    			if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+					var target = $(this.hash);
+      				target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      				if (target.length) {
+        				$('html,body').animate({
+          					scrollTop: target.offset().top
+        				}, 1000);
+        			return false;
+     		 		}
+    			}
+  		});
+	});
+	/****************************/
+	$(function() {
+  		$('a[href=#content3]').click(function() {
+    			if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+					var target = $(this.hash);
+      				target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      				if (target.length) {
+        				$('html,body').animate({
+          					scrollTop: target.offset().top
+        				}, 1000);
+        			return false;
+     		 		}
+    			}
+  		});
+	});
+</script>
 	</body>
 </html>
